@@ -8,5 +8,5 @@ This project implements two of the basic scalling alghorithms for pictures as pr
 ### Half scale using linear neighbour interpolation
 ![Linear scaled image](https://raw.githubusercontent.com/cordu69420/Image-Processing/master/Image%20rescalling/resources/result_linear.png)
 
-### Half using bilinear neighbour interpolation
+### Half scale using bilinear neighbour interpolation
 ![Bilinear scaled image](https://raw.githubusercontent.com/cordu69420/Image-Processing/master/Image%20rescalling/resources/result_bilinear.png)
