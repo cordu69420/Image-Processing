@@ -5,8 +5,8 @@ This project implements two of the basic scalling alghorithms for pictures as pr
 ### Original image
 ![Original image](https://raw.githubusercontent.com/cordu69420/Image-Processing/master/Image%20rescalling/resources/lena.png)
 
-### 0.5 scale of the original image using linear neighbour interpolation
+### Half scale using linear neighbour interpolation
 ![Linear scaled image](https://raw.githubusercontent.com/cordu69420/Image-Processing/master/Image%20rescalling/resources/result_linear.png)
 
-### 0.5 scale of the original image using bilinear neighbour interpolation
+### Half using bilinear neighbour interpolation
 ![Bilinear scaled image](https://raw.githubusercontent.com/cordu69420/Image-Processing/master/Image%20rescalling/resources/result_bilinear.png)
