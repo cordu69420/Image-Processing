@@ -1,6 +1,6 @@
 ## Crosswalk detection using various OpenCV operations
 
-This basic algorithm can detect crosswalks based on the geometric property that the lines are invariant to movement and the lines remain parallel.
+This basic algorithm can detect crosswalks based on the geometric property that the lines are invariant to movement and remain parallel.
 Moreover, each component of a crosswalk represents a white rectangle (basic geometric object with 4 edges). Since the resulting contour approximations are not perfect we have to take into consideration possible approximations of polygons with more edges. 
 
 ## Examples:
