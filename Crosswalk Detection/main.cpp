@@ -8,7 +8,16 @@
 namespace fs = std::filesystem;
 using namespace cv;
 
-Mat detectCrosswalk(Mat input_image, int minArea, int maxPolygonSides)
+/**
+ * @brief Detect the crosswalk based on its geometric properties.
+ *
+ * @param input_image input image
+ * @param minArea Minimum area required for a contour to be valid.
+ * @param maxPolygonSides Max accepted sides for the polygon approximation.
+ * @param minMatches Minimum contour matches required to accept it as a crosswalk.
+ * @return Mat
+ */
+Mat detectCrosswalk(Mat input_image, int minArea, int maxPolygonSides, int minMatches)
 {
     // Considered color filtering but it is not really helpful
     // This is the result that different lighting can have on the crosswalk + different crosswalks color
@@ -50,7 +59,7 @@ Mat detectCrosswalk(Mat input_image, int minArea, int maxPolygonSides)
     // append the relevant contours
     for (int i = 0; i < contours.size(); i++) {
         double area = cv::contourArea(contours[i]);
-        if (area > minArea * minArea) { // parameters of the function
+        if (area > minArea) { // parameters of the function
             // Given the arc length of the contour, take an error (epsilon)
             double epsilon = 0.01 * arcLength(contours[i], true);
             std::vector<Point> contour_approximation;
@@ -80,7 +89,7 @@ Mat detectCrosswalk(Mat input_image, int minArea, int maxPolygonSides)
                 matches++;
             }
         }
-        if (matches >= 3) { // if we have enough matches in the noise or we barely have a contour to match with
+        if (matches >= minMatches) { // if we have enough matches in the noise or we barely have a contour to match with
             crosswalk_indexes.push_back(angle_contours[i].y);
         }
     }
@@ -113,7 +122,7 @@ int main(int argc, char** argv)
     int idx = 0;
     for (const auto& entry : fs::directory_iterator(path)) {
         Mat input_img = imread(entry.path(), -1);
-        Mat output_img = detectCrosswalk(input_img, 35, 8);
+        Mat output_img = detectCrosswalk(input_img, 35 * 35, 8, 3);
         std::string write_path = "../results/result" + std::to_string(idx) + ".jpg";
         imwrite(write_path, output_img);
         idx += 1;
