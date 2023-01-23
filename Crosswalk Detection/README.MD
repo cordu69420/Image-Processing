@@ -5,9 +5,9 @@ Moreover, each component of a crosswalk represents a white rectangle (basic geom
 
 ## Examples:
 
-![dataset/crosswalk5](/assets/images/tux.png) 
+![Crosswalk example](https://raw.githubusercontent.com/cordu69420/Image-Processing/master/Crosswalk%20Detection/dataset/crosswalk5.jpg) 
 
-![results/result3](/assets/images/tux.png) 
+![Crosswalk example result](https://raw.githubusercontent.com/cordu69420/Image-Processing/master/Crosswalk%20Detection/results/result3.jpg) 
 
 ## Improvements
 
