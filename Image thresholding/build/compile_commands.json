@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/cordu/Image-Processing/Image thresholding/build",
+  "command": "/usr/bin/g++   -isystem /usr/include/opencv4  -g   -o CMakeFiles/ImageThresholding.dir/main.cpp.o -c \"/home/cordu/Image-Processing/Image thresholding/main.cpp\"",
+  "file": "/home/cordu/Image-Processing/Image thresholding/main.cpp"
+}
+]

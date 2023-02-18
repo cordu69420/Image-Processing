@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/cordu/Image-Processing/Morphological Operations/build",
+  "command": "/usr/bin/g++   -isystem /usr/include/opencv4  -g   -o CMakeFiles/MorphologicalOperations.dir/main.cpp.o -c \"/home/cordu/Image-Processing/Morphological Operations/main.cpp\"",
+  "file": "/home/cordu/Image-Processing/Morphological Operations/main.cpp"
+}
+]
